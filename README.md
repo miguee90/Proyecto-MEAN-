@@ -1,0 +1,1 @@
+el stack conocido con el acrónimo de MEAN (MongoDB - Express - AngularJS - Node.JS). Desde el cliente al servidor pasando por la base de datos, todas con el mismo punto en común. Desarrollo end-to-end usando JavaScript tanto en el frontend, backend y la base de datos.
