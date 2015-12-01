@@ -1,8 +1,34 @@
+@font-face
+{
+	font-family:majoram;
+	src:url("/fonts/Majoram.otf");
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	margin: 0px auto;
+	padding: 0px;
 }
 
 a {
   color: #00B7FF;
+}
+
+h1
+{
+	font-size: 60pt !important;
+	color: white !important;
+	font-family: majoram !important;
+}
+
+.hea
+{
+	background-color: #2196F3;
+}
+
+.footer
+{
+	background-color: #2196F3;
+	height: 20px;
 }

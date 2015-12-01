@@ -1,12 +1,32 @@
 <!DOCTYPE html>
-<html ng-app="educatech">
+<html ng-app="educa">
   <head>
-    <title><%= title %></title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js"></script>
+    <title>Educacion Interactiva</title>
+	  
+	  <!-- ESTILOS CSS -->
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href='/stylesheets/bootstrap.css'/>
+	<link rel="stylesheet" href='/stylesheets/login/login.css'/>
+	<link rel="stylesheet" href='/stylesheets/home/home.css'/>
+	<link rel="stylesheet" href='/stylesheets/menu/menu.css'/>
+	  
+	 <!--SCRIPT FILES--> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+	 <script type="text/javascript" src="/js/rutas.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>{{10*4}}</p>
+      <div class="container-fluid">
+          <!--HEADER-->
+          <div class="row">
+                <ng-include src="'/common/header.ejs'"></ng-include>
+          </div>
+		  <div class="row">
+			 	<ui-view></ui-view>
+		  </div>
+		  <div class="row">
+		  		<ng-include src="'/common/footer.ejs'"></ng-include>
+		  </div>
+      </div>
   </body>
 </html>
