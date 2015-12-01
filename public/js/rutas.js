@@ -73,6 +73,9 @@ angular.module('educa', ['ui.router'])
 	})
 	.controller('ctrlInfo', function($scope,$state,$location,comunes){
 		$scope.menuItem=0;
+		$scope.boton={};
+		$scope.boton.alumno=false;
+		$scope.boton.profesor=false;
 	
 		$scope.getClass = function (path) {
 		  if ($location.path() === path) {
@@ -80,5 +83,15 @@ angular.module('educa', ['ui.router'])
 		  } else {
 			return '';
 		  }
+		}
+		
+		$scope.clickAlumno = function () {
+		  	$scope.boton.alumno=true;
+			$scope.boton.profesor=false;
+		}
+		
+		$scope.clickProfe = function () {
+		  	$scope.boton.alumno=false;
+			$scope.boton.profesor=true;
 		}
 	})
