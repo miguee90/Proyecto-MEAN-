@@ -1,11 +1,17 @@
 var express = require('express');
 var router = express.Router();
 var passport=require('passport');
-var io=require('socket.io');
 var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 var Login=mongoose.model('Login');
 var Alumno=mongoose.model('Alumno');
+var http=require('http');
+
+var io = require('socket.io')(http);
+
+io.on('connection', function (socket) {
+    console.log("Socket Ready");
+});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
