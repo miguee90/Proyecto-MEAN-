@@ -7,15 +7,86 @@
 		<div class="col-lg-4 ">
 			<button type="button" class="btn btn-primary" ng-click="clickProfe()">Profesor</button>
 		</div>
-		<div class="col-lg-8 col-lg-offset-3 table-responsive tabla" ng-show="boton.alumno">
+		<div class="col-lg-8 col-lg-offset-2 table-responsive tabla" ng-show="boton.alumno">
 			<table class="table table-hover">
+				<h3>Alumnos</h3>
 				<tr class="campos">
 					<td>Clave</td>
 					<td>Nombre</td>
 					<td>Grado</td>
+					<td class="grow" ng-click="addProf()"><span class="glyphicon glyphicon-plus-sign iconos"></span></td>
+				</tr>
+				<tr ng-repeat="alu in alumnos">
+					<td>{{alu.clave}}</td>
+					<td>{{alu.nombre}}</td>
+					<td>{{alu.grado}}</td>
+					<td class="grow"><span class="glyphicon glyphicon-trash"></span></td>
+					<td class="grow"><span class="glyphicon glyphicon-eye-open"></span></td>
 				</tr>
 			</table>
 		</div>
+		<div class="col-lg-8 col-lg-offset-2 table-responsive tabla" ng-show="boton.profesor">
+			<table class="table table-hover">
+				<h3>Profesores</h3>
+				<tr class="campos">
+					<td>Nombre</td>
+					<td>Teléfono</td>
+					<td>Dirección</td>
+					<td class="grow" ng-click="addProf()"><span class="glyphicon glyphicon-plus-sign iconos"></td>
+				</tr>
+			</table>
+		</div>
+		<div>
+		<div class="modali" ng-show="boton.alta">
+			<div class="col-lg-2 col-lg-offset-10 cerrar" ng-click="cierraAlta()">
+				<span style="font-size: 31pt;" class="glyphicon glyphicon-remove-circle iconos"></span>
+			</div>
+			<div class="col-lg-10 col-lg-push-1 contenedor">
+				{{mensaje}}
+				<div ng-show="boton.alumno">
+					<h1>Inserta Nuevo Alumno</h1>
+					<form ng-submit="addAlumno()">
+						<input type="text" 
+							   placeholder="Nombre de alumno" 
+							   class="form-control inps" 
+							   name="nombreAlumno"
+							   ng-model="alumno.nombre"/>
+						<input type="text" 
+							   placeholder="Clave" 
+							   class="form-control inps" 
+							   name="clave"
+							   ng-model="alumno.clave"/>
+						<input type="text" 
+							   placeholder="Grado" 
+							   class="form-control inps" 
+							   name="grado"
+							   ng-model="alumno.grado"/>
+						<button type="submit" class="btn btn-success boton">Guardar</button>
+					</form>
+				</div>
+				<div ng-show="boton.profesor">
+					<h1>Inserta nuevo profesor</h1>
+					<form>
+						<input type="text" 
+							   placeholder="Nombre del profesor" 
+							   class="form-control inps" 
+							   name="nombreProf"
+							   ng-model="prof.nombre"/>
+						<input type="tel" 
+							   placeholder="Teléfono" 
+							   class="form-control inps" 
+							   name="tel"
+							   ng-model="prof.tel"/>
+						<input type="text" 
+							   placeholder="Dirección" 
+							   class="form-control inps" 
+							   name="direccion"
+							   ng-model="prof.direccion"/>
+						<button type="submit" class="btn btn-success boton">Guardar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		</div>
 	</div>
-	
 </div>

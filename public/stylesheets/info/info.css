@@ -1,6 +1,6 @@
 .tabla
 {
-	margin: 50px;
+	margin: 30px;
 }
 
 .campos
@@ -8,4 +8,52 @@
 	background-color: #2196F3;
 	font-size: 14pt;
 	font-weight: bold;
+}
+
+.iconos
+{
+	font-size: 20pt;
+	color: #ff5722;
+}
+
+.grow {
+  -webkit-transition:all 0.5s ease-out;
+  -moz-transition:all 0.5s ease-out;
+  -ms-transition:all 0.5s ease-out;
+  -o-transition:all 0.5s ease-out;
+  transition:all 0.5s ease-out;
+}
+
+.grow:hover {
+  -webkit-transform:scale(1.2);
+  -moz-transform:scale(1.2);
+  -ms-transform:scale(1.2);
+  -o-transform:scale(1.2);
+  transform:scale(1.2);
+}
+
+.modali
+{
+	position: fixed;
+	background: rgba(0,0,0,0.8);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.contenedor
+{
+	height: 75%;
+	background-color: antiquewhite;
+	max-width: 100%;
+	border: 7px solid #fff;
+	margin-top: 80px;
+}
+
+.cerrar
+{
+	position: relative;
+	top: 80px;
+	left: 50px;
 }

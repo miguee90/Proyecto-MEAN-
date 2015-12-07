@@ -11,9 +11,8 @@ var AlumnoSchema=new mongoose.Schema({
 	grado:{
 		type: Number
 	},
-	usuario:{
+	usuario_id:{
 		type: Schema.ObjectId,
-		ref: 'Login'
 	}
 });
 
